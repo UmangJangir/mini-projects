@@ -1,4 +1,4 @@
 # rps-game
 A simple Rock-Paper-Scissors game built using python
-# number guess
+# number guessing game
 A simple number guessing game built using python 
