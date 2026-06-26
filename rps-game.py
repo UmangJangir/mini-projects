@@ -1,7 +1,20 @@
+import random 
+import pyttsx3
+jarvis = pyttsx3.init()
+     
+choose=["stone", "paper", "scissor"]
 while True:
-     import random 
-     choose=["stone", "paper", "scissor"]
-     user= input("choose one : stone paper scissor").lower()
+     
+     jarvis.say("Choose stone , paper or scissor")
+     jarvis.runAndWait()
+     user= input("choose one (stone/paper/scissor/quit):").strip().lower()
+     if user == "quit":
+          print("Game over !")
+          break
+     if user not in choose:
+          print("Invalid choice")
+          continue
+     
      print("you choose:", user)
      pc=random.choice(choose)
      print("pc choose:", pc)
@@ -13,4 +26,4 @@ while True:
 
           print("you won ! 🏆")
      else:
-          print("pc won !🏆")   
+          print("pc won !🏆")     
